@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MY APP</title>
+</head>
+<body>
+  
+
+  <ul class="users">
+  <% for(var i=0; i<users.length; i++) {%>
+    <li class="user">
+      <span><%= users[i].Name %></span>
+      <span><%= users[i].Password %></span>
+    </li>
+  <% } %>
+  </ul>
+
+  <form action="/users" method="POST">
+	  <input type="text" placeholder="Name" name="Name">
+	  <input type="text" placeholder="quote" name="Password">
+	  <button type="submit">Submit</button>
+	</form>
+</body>
+</html>
